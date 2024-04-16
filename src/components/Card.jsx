@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = ({blog}) => {
-  const {title, category,image} = blog;
+  const {title, category,image,id} = blog;
   return (
     <div className="border-2 sm:w-96 rounded-lg m-4 flex flex-col shadow-xl">
       <img
@@ -15,7 +15,7 @@ const Card = ({blog}) => {
         <p className="text-xl font-semibold capitalize line-clamp-2">
           {title}
         </p>
-        <Link to='/blog/'>
+        <Link to={`/blog/${id}`}>
         <button className=" bg-slate-400 p-3 rounded-lg text-white hover:opacity-90 shadow-lg cursor-pointer">Learn More</button>
         </Link>
       </div>
