@@ -1,0 +1,7 @@
+services:
+  - name: blog_app
+    env: node
+    buildCommand: npm run build
+    startCommand: npm run start
+    envVars:
+      NODE_ENV: production
