@@ -16,7 +16,7 @@ const Card = ({blog}) => {
           {title}
         </p>
         <Link to={`/blog/${id}`}>
-        <button className=" bg-slate-400 p-3 rounded-lg text-white hover:opacity-90 shadow-lg cursor-pointer">Learn More</button>
+        <button className=" bg-slate-400 py-3 px-8 rounded-lg text-white hover:opacity-90 shadow-lg cursor-pointer">Learn More</button>
         </Link>
       </div>
     </div>
