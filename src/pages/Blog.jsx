@@ -15,39 +15,32 @@ const Blog = () => {
   }, []);
 
   return (
-    <div>
+    <>
       {data && (
-        <div className="flex flex-col">
-          <img className="w-3/5 self-center py-4" src={data.image} alt="logo" />
-          <div className="p-8 ">
-            <p>
-              <span className="font-semibold mr-2">Title:</span>
-              {data.title}
-            </p>
-            <p>
+        <div className="p-3 flex flex-col max-w-6xl mx-auto min-h-screen">
+          <h1 className="text-2xl mt-10 p-3 text-center font-serif max-w-2xl mx-auto lg:text-3xl">
+            {data.title}
+          </h1>
+          <img className="mt-10 p-3 w-4/5 object-cover self-center" src={data.image} alt="logo" />
+          <div className="p-3 max-w-2xl mx-auto w-full">
+            <div className="flex justify-between p-3 border-b border-slate-500 text-xs">
+              <span>{data.published_date}</span>
+              <span>{data.reading_time} reading</span>
+            </div>
+            <p className="py-3">
               <span className="font-semibold mr-2">Author:</span>
               {data.author}
             </p>
-            <p>
-              <span className="font-semibold mr-2">Category:</span>{" "}
-              {data.category}
+            <p className="font-bold">
+              {data.category}:
             </p>
             <p>
-              <span className="font-semibold mr-2"> Published Date:</span>
-              {data.published_date}
-            </p>
-            <p>
-              <span className="font-semibold mr-2">Reading Time:</span>{" "}
-              {data.reading_time}
-            </p>
-            <p>
-              <span className="font-semibold mr-2">Content:</span>{" "}
               {data.content}
             </p>
           </div>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
